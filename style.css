@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black; /* Set background to black */
+}
+
+.wrapper {
+    position: relative;
+    width: 90%; /* Responsive width */
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em; /* Larger font for PC */
+    color: white; /* Change text color to white */
+    margin: 15px 0;
+    animation: flicker 1s infinite; /* Add flicker animation */
+}
+
+.gif {
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-group {
+    margin-top: 50px;
+    display: flex; /* Use flexbox for side-by-side buttons */
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+button {
+    width: 150px; /* Fixed width for buttons */
+    height: 50px; /* Increased height for easier tapping */
+    border-radius: 25px; /* Make the buttons rounded */
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+}
+
+/* Yes Button Styles */
+button.yes-btn {
+    background: pink; /* Pink background */
+    color: white; /* White text */
+    font-size: 1.2em;
+}
+
+/* No Button Styles */
+button.no-btn {
+    background: red; /* Blood red background */
+    color: white; /* White text */
+    border-radius: 25px; /* Keep rounded */
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em; /* Smaller font for smaller screens */
+    }
+
+    button {
+        font-size: 1em; /* Slightly smaller font in buttons */
+    }
+}
+
+/* Additional styles for the response text */
+.response {
+    color: white; /* Set text color to white */
+    font-weight: bold; /* Make text bold */
+}
